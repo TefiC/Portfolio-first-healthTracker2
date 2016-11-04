@@ -1,0 +1,582 @@
+/*DEFAULT STYLE FOR MOBILE*/
+
+html,
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.row {
+	margin: 0;
+	padding: 0;
+}
+
+/*Main container scrollbar*/
+
+/*SCROLL BAR. COPYRIGHT (1) (see end of file) */
+body::-webkit-scrollbar {
+	width: 30px;
+	/*Background where it scrolls*/
+	background-color: #a4e6a4;
+}
+
+body::-webkit-scrollbar-thumb {
+	/*Actual bar color*/
+	background-color: #a59687;
+	border: 1px solid black;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	/*If the user hovers on it*/
+	background-color: gray;
+	border:1px solid #333333;
+}
+
+body::-webkit-scrollbar-thumb:active {
+	/*If the user clicks and scrolls the bar*/
+	background-color: #a4c2e6;
+	border:1px solid #333333;
+}
+
+body::-webkit-scrollbar-track {
+	/*Edges*/
+	border:1px gray solid;
+	-webkit-box-shadow:0 0 6px gray inset;
+	-moz-box-shadow:0 0 6px gray inset;
+	box-shadow:0 0 6px gray inset;
+}
+
+/*====================================================================*/
+
+/*MAIN SCREEN*/
+
+/*====================================================================*/
+
+.main-container {
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*====================================================================*/
+
+/*FIRST SCREEN*/
+
+/*====================================================================*/
+
+.first-screen {
+	height: 100vh;
+	display: flex;
+	align-items: flex-end;
+	padding: 0;
+	margin: 0;
+	background-size: cover;
+	background-image: url('../img/jugging-very-small_edited.jpg');
+}
+
+@media screen and (max-width: 574px) and (min-height: 677px) {
+	.first-screen {
+		background-image: url('../img/jugging-small_edited.jpg');
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.first-screen {
+		background-image: url('../img/jugging-small_edited.jpg');
+	}
+}
+
+@media screen and (min-width: 760px) {
+	.first-screen {
+		background-image: url('../img/jugging-medium_edited.jpg');
+	}
+}
+
+@media screen and (min-width: 760px) and (min-height:  920px) {
+	.first-screen {
+		background-image: url('../img/jugging-small_edited.jpg');
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.first-screen {
+		background-image: url('../img/jugging-wide_edited.jpg');
+	}
+}
+
+@media screen and (min-width: 1200px)  and (max-width: 1445px) and (min-height: 800px) and (max-height: 1000px){
+	.first-screen {
+		background-image: url('../img/jugging-medium_edited.jpg');
+	}
+}
+
+	/*Header*/
+
+.first-screen-header {
+	position: absolute;
+	top: 0;
+	background-color: rgb(189, 183, 177);
+	width: 100%;
+	height: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 8px solid #a4e6a4;
+}
+
+.first-screen-header-col {
+	width: 100%;
+}
+
+.header-container {
+	display: flex;
+	align-items: center;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Title*/
+.header-title-col {
+
+}
+
+.app-title {
+	color: white;
+	text-align: center;
+	font-family: 'Poiret One', cursive; /*CUSTOM FONT*/
+	margin: 4px;
+	font-weight: bold;
+}
+
+
+/*START SCREEN CONTENT ================================================*/
+
+input {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	z-index: 3;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.start-screen-content {
+	width: 85%;
+	max-width: 370px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 17vh;
+	background-color: rgba(189, 183, 177, 0.31);
+	border-radius: 30px;
+}
+
+.start-screen-slogan {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.56);
+	border-radius: 6px;
+	text-align: center;
+	font-size: 21px;
+	text-shadow: 2px 2px 1px #6caece;
+	color: black;
+	margin: 0;
+	font-family: 'Poiret One', cursive; /*CUSTOM FONT*/
+	font-weight: bold;
+}
+
+.start-screen-button {
+	margin: 14px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #93ecff;
+	border: 2px solid #bdb7b1;
+}
+
+/*Input*/
+.input-field {
+	border-radius: 8px;
+	text-align: center;
+	margin-top: 15px;
+	box-shadow: 0px 2px 3px #76dad7;
+}
+
+.search-input-field {
+
+}
+
+.goal-input-field {
+
+}
+
+.submit-main-container {
+	width: 100%;
+	text-align: center;
+}
+
+
+/*FOOTER ================================================*/
+
+.start-screen-footer {
+	height: 53px;
+	width: 100%;
+	background-color: #bdb7b1;
+	position: absolute;
+	border-top: 8px solid #a4e6a4;
+}
+
+.footer-col {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
+
+.footer-container {
+	width: 354px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.social-icons-wrapper {
+	display: flex;
+	padding: 0;
+}
+
+.social-icon {
+	max-height: 40px;
+	max-width: 40px;
+}
+
+.nutritionix-logo {
+	max-width: 138px;
+	margin-left: auto;
+}
+
+/*====================================================================*/
+
+/*SEARCH RESULTS*/
+
+/*====================================================================*/
+
+.search-results-screen {
+	height: 100vh;
+	background-color: #c7c1ba;
+	padding: 0;
+}
+
+/*Color lines*/
+.search-results-header {
+	height: 40px;
+	width: 100%;
+	background-color: #a4e6a4;
+	border-top: 10px solid gray;
+	border-bottom: 10px solid #a59687;
+}
+
+.search-results-footer {
+	height: 40px;
+	width: 100%;
+	background-color: #a4e6a4;
+	border-top: 10px solid #a59687;
+	border-bottom: 10px solid gray;
+	position: absolute;
+	bottom: 0;
+}
+
+/*Title*/
+.search-results-title-div {
+	width: 100%;
+	height: 70px;
+	background-color: rgba(253, 253, 253, 0.45);
+
+	margin-top: 20px;
+
+	display: flex;
+	align-items: center;
+}
+
+.search-results-container {
+	height: 100%;
+	max-width: 800;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.search-results-title-text {
+	font-size: 30px;
+	margin-left: 24px;
+	margin-right:24px;
+	margin-top: 5px;
+	text-align: center;
+
+	color: gray;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px white;
+	font-family: 'Poiret One', cursive; /*CUSTOM FONT*/
+}
+
+/*Results*/
+
+.results-container {
+	/*background-color: red;*/
+	overflow-y: auto;
+	height: 65vh;
+	max-width: 600px;
+	max-height: 65vh;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*INGREDIENT TEMPLATE*/
+.ingredient-main-div  {
+	background-color: #a4c2e6;
+	border-bottom: 4px solid gray;
+	margin: 9px 0;
+	padding: 17px;
+
+	display: flex;
+	align-items: center;
+}
+
+
+.ingredient-internal-col {
+	padding: 0 5px;
+}
+
+.ingredient-text-container {
+
+}
+
+.ingredient-text {
+	color: white;
+	font-size: 15px;
+	margin: 0;
+	text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.72);
+}
+
+.add-icon-container,
+.remove-icon-container {
+	cursor: pointer;
+}
+
+.calories-counter-div {
+	height: 27px;
+	background-color: #a4e6a4;
+	border-radius: 2px;
+	border: 1px solid gray;
+	border-radius: 8px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+.calories-text {
+	font-size: 13px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px black;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+}
+
+.result-button {
+	padding: 0;
+	width: 30px;
+	margin: 0 3px;
+}
+
+/*Add button*/
+.add-icon-container,
+.remove-icon-container {
+	width: 30px;
+	height: 100%;
+	cursor: pointer;
+}
+
+.add-icon-container {
+	margin-left: 5px;
+}
+
+.add-icon,
+.remove-icon {
+	width: 30px;
+	height: 30px;
+}
+
+/*Header Buttons*/
+
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #a4c2e6;
+   background: -webkit-gradient(linear, left top, left bottom, from(#a4e6a4), to(#a4c2e6));
+   background: -webkit-linear-gradient(top, #a4e6a4, #a4c2e6);
+   background: -moz-linear-gradient(top, #a4e6a4, #a4c2e6);
+   background: -ms-linear-gradient(top, #a4e6a4, #a4c2e6);
+   background: -o-linear-gradient(top, #a4e6a4, #a4c2e6);
+   cursor: pointer;
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 14px;
+   font-weight: bold;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   text-shadow: 1px 1px 1px black;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #a4e6a4;
+   background: #a4e6a4;
+   color: #ffffff;
+   }
+.button:active {
+   border-top-color: #a4e6a4;
+   background: #a4e6a4;
+   }
+
+
+
+
+/*Scrollbar*/
+
+/*SCROLL BAR. COPYRIGHT (1) (see end of file) */
+.results-container::-webkit-scrollbar {
+	width: 10px;
+	/*Background where it scrolls*/
+	background-color: white;
+	border-radius: 10px;
+}
+
+.results-container::-webkit-scrollbar-thumb {
+	/*Actual bar color*/
+	background-color: gray;
+	border-radius:10px;
+}
+
+.results-container::-webkit-scrollbar-thumb:hover {
+	/*If the user hovers on it*/
+	background-color: #a4e6a4;
+	border:1px solid #333333;
+}
+
+.results-container::-webkit-scrollbar-thumb:active {
+	/*If the user clicks and scrolls the bar*/
+	background-color: #a59687;
+	border:1px solid #333333;
+}
+
+.results-container::-webkit-scrollbar-track {
+	/*Edges*/
+	border:1px gray solid;
+	border-radius:10px;
+	-webkit-box-shadow:0 0 6px gray inset;
+	-moz-box-shadow:0 0 6px gray inset;
+	box-shadow:0 0 6px gray inset;
+}
+
+/*====================================================================*/
+
+/*MY MENU*/
+
+/*====================================================================*/
+.selected-ingredient {
+	background-color: #fbd179;
+}
+
+/*====================================================================*/
+
+/*TOTAL CALORIES*/
+
+/*====================================================================*/
+
+.total-calories-screen {
+	background-image: url('../img/salad-nice_edited.jpg');
+	background-size: cover;
+}
+
+.total-calories-circle-container {
+	height: 40vh;
+}
+
+.total-calories-title {
+	background-color: white;
+}
+
+.total-calories-circle-div {
+	background-color: rgba(247, 247, 247, 0.68);
+	height: 80%;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 35px;
+	display: flex;
+	align-items: center;
+	border: 1px solid black;
+}
+
+.total-calories-text {
+	color: #4211ff;
+	font-size: 40px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px black;
+	width: 100%;
+	text-align: center;
+	font-family: 'Poiret One', cursive; /*CUSTOM FONT*/
+}
+
+.total-calories-message {
+	width: 100%;
+	text-align: center;
+	font-size: 27px;
+	font-weight: bold;
+	margin-top: 15px;
+	text-shadow: 1px 1px 1px gray;
+	color: #20589c;
+	font-family: 'Poiret One', cursive;/* CUSTOM FONT*/
+	background-color: rgba(255, 255, 255, 0.77);
+}
+
+/*====================================================================*/
+
+/*MEDIA QUERIES ******************************************************/
+
+/*====================================================================*/
+
+@media screen and (min-width: 500px) {
+	.ingredient-text {
+		font-size: 18px;
+	}
+}
+
+/*For very small devices*/
+
+@media screen and (max-width: 330px) {
+	.images.google.com {
+		height: 33px;
+	}
+	.calories-text {
+		font-size: 10px;
+	}
+}
+
+/*Hide buttons on large devices*/
+@media screen and (min-width: 992px){
+	#next, #return {
+		display: none;
+	}
+}

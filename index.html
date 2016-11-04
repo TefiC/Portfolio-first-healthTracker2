@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Health Tracker project</title>
+
+		<!-- FOR SMALL LOGO IN TITLE TAB -->
+		<link rel="shortcut icon" type="image/x-icon" href="img/burger-icon.png">
+
+		<!-- SCRIPTS -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"> <!-- Health tracker -->
+
+		<!-- CSS file -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- JS Libraries-->
+		<script src="js/underscore.js"></script>
+		<script src="js/backbone.js"></script>
+
+		<!-- Scripts -->
+		<script defer src="js/app.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- MAIN CONTENT -->
+		<div class="main-container row">
+
+			<!--
+
+			FIRST SCREEN SECTION
+
+			-->
+			<section class="first-screen col-xs-12">
+
+				<!-- Header -->
+				<header class="first-screen-header row">
+
+
+					<div class="first-screen-header-col col-xs-12">
+
+						<div class="header-container">
+
+
+							 <!-- Title -->
+							<div class="header-title-col">
+								<h1 class="app-title">Health tracker</h1>
+							</div>
+
+						</div>
+
+					</div>
+
+				</header>
+
+
+				<!-- Search fields and text -->
+				<div class="start-screen-content ">
+
+					<p class="start-screen-slogan">Be brave. Count your calories.</p>
+					<!-- Searh Input -->
+					<input class="search-input-field input-field" type="text" placeholder="Enter search">
+					<!-- Goal input -->
+					<input class="goal-input-field input-field" type="text" placeholder="Enter you calories goal">
+
+					<div class="submit-main-container">
+						<!--Submit button-->
+						<button class="start-screen-button" type="submit">Search!</button>
+					</div>
+
+				</div>
+
+				<footer class="start-screen-footer row">
+
+					<!-- Column -->
+					<div class="footer-col col-xs-6">
+
+						<div class="footer-container">
+							<!-- SOCIAL ICONS -->
+							<div class="social-icons-wrapper col-xs-6">
+								<!-- Facebook -->
+								<a href="https://www.facebook.com/" target="_blank"><img class="social-icon img-responsive" src="img/social/facebook.png"></a>
+								<!-- Twitter -->
+								<a href="https://www.twitter.com/" target="_blank"><img class="social-icon img-responsive" src="img/social/twitter.png"></a>
+								<!-- linkedin-->
+								<a href="https://www.linkedin.com/" target="_blank"><img class="social-icon img-responsive" src="img/social/linkedin.png"></a>
+								<!-- Instagram -->
+								<a href="https://www.instagram.com/" target="_blank"><img class="social-icon img-responsive" src="img/social/instagram.png"></a>
+							</div>
+
+							<!-- Nutritionix logo-->
+							<img class="nutritionix-logo img-responsive" src="img/attribution/nutritionix.png">
+						</div>
+					</div>
+
+				</footer>
+			</section> <!-- FIRST SCREEN -->
+
+			<!--
+
+			SEARCH RESULTS SECTION
+
+			-->
+			<section class="search-results-screen search-results col-xs-12 col-md-6">
+
+				<header class="search-results-header row">
+					<!-- COLOR LINES -->
+				</header>
+
+
+				<!-- TITLE -->
+				<div class="search-results-title-div row">
+					<div class="search-results-container">
+						 <button class="button results-return-button" type="button">Return</button>
+						<h1 class="search-results-title-text">Search Results</h1>
+						<button class="button results-next-button" id="next" type="button">Next</button>
+					</div>
+				</div>
+
+				<!-- RESULTS CONTAINER -->
+				<div class="results-container api-results-container row">
+
+					<!-- INGREDIENT TEMPLATE -->
+					<script id="ingredients-template" type="text/template">
+							<div class="ingredient-internal-col col-xs-12">
+
+								<!-- Text -->
+								<div class="ingredient-text-container col-xs-7">
+									<p class="ingredient-text"><%= title %></p>
+								</div>
+
+								<div class="calories-counter-div col-xs-2">
+									<!-- Filled with calories -->
+									<p class="calories-text"><%= calories %></p>
+								</div>
+
+								<div class="add result-button col-xs-1 col-xs-push-1">
+									<div class="add-icon-container">
+										<img class="add-icon" src="img/add-icon.png">
+									</div>
+								</div>
+							</div>
+					</script>
+				</div>
+
+				<footer class="search-results-footer row">
+					<!-- COLOR LINES -->
+				</footer>
+
+			</section>
+
+
+			<!--
+
+			MY MENU SECTION
+
+			-->
+			<section class="search-results-screen my-menu-main col-xs-12 col-md-6">
+
+				<header class="search-results-header row">
+					<!-- COLOR LINES -->
+				</header>
+
+
+				 <!-- TITLE -->
+				<div class="search-results-title-div row">
+					<div class="search-results-container">
+						 <button class="button selected-return-button" id="return" type="button">Return</button>
+						<h1 class="search-results-title-text">My Menu</h1>
+						<button class="button selected-next-button" type="button">Next</button>
+					</div>
+				</div>
+
+				<!-- SELECTED ITEMS CONTAINER -->
+				<div class="results-container selected-results-container selected-ingredients-container row">
+
+					<!-- SELECTED INGREDIENT TEMPLATE -->
+					<!-- INGREDIENT TEMPLATE -->
+					<script id="selected-ingredient-template" type="text/template">
+							<div class="ingredient-internal-col col-xs-12">
+
+								<!-- Text -->
+								<div class="ingredient-text-container col-xs-7">
+									<p class="ingredient-text"><%= title %></p>
+								</div>
+
+								<div class="calories-counter-div col-xs-2">
+									<!-- Filled with calories -->
+									<p class="calories-text"><%= calories %></p>
+								</div>
+
+								<!-- remove icon -->
+								<div class="remove result-button col-xs-1 col-xs-push-1">
+									<div class="remove-icon-container">
+										<img class="remove-icon" src="img/remove-icon.png">
+									</div>
+								</div>
+							</div>
+					</script>
+
+
+				</div>
+
+				<footer class="search-results-footer row">
+					<!-- COLOR LINES -->
+				</footer>
+
+			</section>
+
+			 <!--
+
+			TOTAL CALORIES SECTION
+
+			-->
+
+			<section class="search-results-screen total-calories-screen col-xs-12">
+
+				<header class="search-results-header row">
+					<!-- COLOR LINES -->
+				</header>
+
+				<!-- TITLE -->
+				<div class="search-results-title-div total-calories-title row">
+					<div class="search-results-container">
+						 <button class="button total-calories-return-button" type="button">Return</button>
+						<h1 class="search-results-title-text">You've consumed</h1>
+					</div>
+				</div>
+
+				<!-- TOTAL CALORIES -->
+				<div class="total-calories-circle-container row">
+
+					<div class="total-calories-circle-div col-xs-8 col-xs-push-2 col-md-4 col-md-push-4">
+						<!-- <p class="total-calories-text">120 calories</p> -->
+					</div>
+
+				</div>
+
+				<!-- PERSONALIZED MEESAGE -->
+				<p class="total-calories-message"><strong>Congratulations!</strong> <br>You've reached your goal</p>
+
+				<footer class="search-results-footer row">
+					<!-- COLOR LINES -->
+				</footer>
+
+			</section>
+		</div>
+	</body>
+</html>
