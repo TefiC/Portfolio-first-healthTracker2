@@ -43,8 +43,6 @@ body::-webkit-scrollbar-thumb:active {
 body::-webkit-scrollbar-track {
 	/*Edges*/
 	border:1px gray solid;
-	-webkit-box-shadow:0 0 6px gray inset;
-	-moz-box-shadow:0 0 6px gray inset;
 	box-shadow:0 0 6px gray inset;
 }
 
@@ -57,8 +55,13 @@ body::-webkit-scrollbar-track {
 .main-container {
 	width: 100%;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 /*====================================================================*/
@@ -69,8 +72,12 @@ body::-webkit-scrollbar-track {
 
 .first-screen {
 	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: flex-end;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 	padding: 0;
 	margin: 0;
 	background-size: cover;
@@ -121,8 +128,11 @@ body::-webkit-scrollbar-track {
 	background-color: rgb(189, 183, 177);
 	width: 100%;
 	height: 60px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	border-bottom: 8px solid #a4e6a4;
 }
 
@@ -131,8 +141,12 @@ body::-webkit-scrollbar-track {
 }
 
 .header-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 300px;
 	margin-left: auto;
 	margin-right: auto;
@@ -166,8 +180,11 @@ input {
 .start-screen-content {
 	width: 85%;
 	max-width: 370px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 17vh;
@@ -231,8 +248,12 @@ input {
 .footer-col {
 	width: 100%;
 	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 5px;
 }
 
@@ -243,6 +264,8 @@ input {
 }
 
 .social-icons-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 0;
 }
@@ -296,15 +319,25 @@ input {
 
 	margin-top: 20px;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .search-results-container {
 	height: 100%;
 	max-width: 800;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -342,8 +375,14 @@ input {
 	margin: 9px 0;
 	padding: 17px;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 
@@ -374,8 +413,12 @@ input {
 	border: 1px solid gray;
 	border-radius: 8px;
 	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .calories-text {
@@ -419,16 +462,10 @@ input {
    background: #a4c2e6;
    background: -webkit-gradient(linear, left top, left bottom, from(#a4e6a4), to(#a4c2e6));
    background: -webkit-linear-gradient(top, #a4e6a4, #a4c2e6);
-   background: -moz-linear-gradient(top, #a4e6a4, #a4c2e6);
-   background: -ms-linear-gradient(top, #a4e6a4, #a4c2e6);
    background: -o-linear-gradient(top, #a4e6a4, #a4c2e6);
    cursor: pointer;
    padding: 5px 10px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
    border-radius: 8px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
    box-shadow: rgba(0,0,0,1) 0 1px 0;
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: #ffffff;
@@ -484,8 +521,6 @@ input {
 	/*Edges*/
 	border:1px gray solid;
 	border-radius:10px;
-	-webkit-box-shadow:0 0 6px gray inset;
-	-moz-box-shadow:0 0 6px gray inset;
 	box-shadow:0 0 6px gray inset;
 }
 
@@ -524,8 +559,12 @@ input {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 35px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	border: 1px solid black;
 }
 
